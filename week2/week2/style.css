@@ -1,0 +1,111 @@
+/* Start general  */
+* {
+  box-sizing: border-box;
+}
+#grid-floats {
+  overflow: hidden;
+}
+#grid-floats,
+#grid-flex {
+  list-style: none;
+  padding: 0;
+}
+
+/* Start grid-floats */
+img {
+  max-width: 100%;
+  max-height: 200px;
+}
+#grid-floats .grid-item {
+  background-color: rgb(247, 138, 99);
+  border: 2px solid #cccccc;
+  color: #110707;
+  border-radius: 15px;
+  box-shadow: -10px 10px 5px #3d3f3a;
+  margin: 15px;
+  padding: 10px;
+  min-height: 650px;
+  float: left;
+  text-align: center;
+}
+/* Start grid-flex */
+#grid-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+#grid-flex .grid-item {
+  background-color: rgb(164, 202, 224);
+  border: 2px solid #110707;
+  border-radius: 15px;
+  box-shadow: -10px 10px 5px #3d3f3a;
+  margin: 10px;
+  padding: 5px;
+}
+#grid-flex .grid-item:nth-child(n + 2) {
+  background-color: rgb(164, 202, 224);
+  border: 2px solid #110707;
+  margin: 10px;
+  padding: 5px;
+}
+
+/*  start mobile screen */
+
+/* mobile screen for grid-floats*/
+@media (max-width: 550px) {
+  #grid-floats .grid-item {
+    width: calc(100% - 30px);
+  }
+  #grid-floats .grid-item:nth-child(n + 2) {
+    width: calc(50% - 30px);
+  }
+
+  /* mobile screen for grid-flex*/
+  @media (max-width: 550px) {
+    #grid-flex .grid-item:nth-child(n + 2) {
+      width: calc(50% - 20px);
+    }
+  }
+}
+
+/*  start talet screen */
+/* tablet screen for grid-floats*/
+@media (min-width: 551px) {
+  #grid-floats .grid-item {
+    width: calc(50% - 30px);
+    min-height: 850px;
+  }
+  #grid-floats .grid-item:nth-child(n + 3) {
+    width: calc(33.333% - 30px);
+  }
+  /* talet screen for grid-flex*/
+  @media (min-width: 551px) {
+    #grid-flex .grid-item {
+      width: calc(50% - 20px);
+    }
+    #grid-flex .grid-item:nth-child(n + 3) {
+      width: calc(33.333% - 20px);
+    }
+  }
+}
+/*  start labtop screen */
+/* labtop screen for grid-floats*/
+@media (min-width: 1000px) {
+  #grid-floats .grid-item {
+    width: calc(50% - 30px);
+    min-height: 600px;
+  }
+  #grid-floats .grid-item:nth-child(n + 2) {
+    width: calc(25% - 30px);
+  }
+  /* labtop screen for grid-flex*/
+  @media (min-width: 1000px) {
+    #grid-flex .grid-item {
+      width: calc(50% - 20px);
+    }
+    #grid-flex .grid-item:nth-child(n + 2) {
+      width: calc(25% - 20px);
+    }
+  }
+}
