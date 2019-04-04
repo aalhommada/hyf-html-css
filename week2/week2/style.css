@@ -10,6 +10,14 @@
   list-style: none;
   padding: 0;
 }
+h2 ,h1, h3{
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  color: coral;
+  text-shadow: -5px 5px 5px #110707;
+}
+h1{font-size :3rem;}
+h2{font-size: 2rem;}
 
 /* Start grid-floats */
 img {
