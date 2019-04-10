@@ -1,0 +1,18 @@
+
+1- mkdir abdullah
+   cd abdullah
+   touch blank
+
+2- for i in {1..5}; do echo "hello"; done >> greeting.txt
+   for i in {1..5}; do cp greeting.txt $i.txt; done
+
+3- echo "cat" >> pets.txt
+   echo "dog" >> pets.txt
+   echo "hamster" >> pets.txt
+
+ 4- echo "cat" >> commands.txt
+    echo "ls" >> commands.txt
+    echo "pwd" >> commands.txt
+
+5- cat pets.txt commands.txt | sort | uniq > lovelyCommands.txt
+
